@@ -1,8 +1,8 @@
 :root {
     /* color definitions */
-    --background-color: rgb(55, 53, 62);
+    --background-color: rgb(66, 58, 81);
     --outline-color: rgb(68, 68, 78);
-    --card-color: rgb(99, 84, 83);
+    --card-color: rgb(125, 89, 87);
     --text-color: rgb(211, 218, 217);
 
     background-color: var(--background-color);
@@ -18,10 +18,44 @@ html, body {
 
 body {
     display: flex;
-    align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
+    align-items: center;
+    justify-content: center; 
     min-height: 100vh;
     background-color: var(--background-color);
+    gap: 25px;
+}
+
+#header {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+#header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* width: 100%;
+    height: 100vh;
+    opacity: 0.8; */
+}
+
+#header .header_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.515);
+    width: 100%;
+}
+
+#header .credit {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: var(--text-color);
 }
 
 #form {
@@ -33,6 +67,8 @@ body {
     width: fit-content;
     gap: 25px;
     background-color: var(--card-color);
+    margin-right: 20px;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.5);
 }
 
 #container {
@@ -47,6 +83,8 @@ body {
 }
 
 fieldset {
+    width: 450px;
+    /* height: 400px; */
     border: none;
     border: 1px dashed var(--text-color);
     border-radius: 20px;
@@ -79,17 +117,6 @@ label {
     width: 150px;
 }
 
-#submit_button > button {
-    border: none;
-    border-radius: 25px;
-    width: 100px;
-    height: 35px;
-    background-color: var(--outline-color);
-    color: var(--text-color);
-    font-weight: bold;
-    cursor: pointer;
-}
-
 select {
     text-align: center;
     border: none;
@@ -108,8 +135,19 @@ hr.dashed {
     border-top: 1px dashed var(--text-color);
 }
 
+#submit_button > button {
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    background-color: rgba(249, 198, 155);
+    color: var(--background-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
 #submit_button > button:hover {
-    background-color: var(--background-color);
+    background-color: rgb(189, 151, 120);
 }
 
 #submit_button {
