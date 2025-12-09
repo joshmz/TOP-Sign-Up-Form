@@ -7,24 +7,84 @@
     <title>Sign-Up</title>
 </head>
 <body>
-    <div id="form">
-        <h1>Sign Up</h1>
-        <form action="#" method="post">
-            <label for="first_name">First Name:</label>
-            <input type="text" id="first_name" name="first_name">
-            <br>
-            <label for="last_name">Last Name:</label>
-            <input type="text" id="last_name" name="last_name">
-            <br>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age">
-            <br>
-            <label for="email">Email: </label>
-            <input type="email" id="email" name="email">
-            <br>
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password">
-        </form>
-    </div>
+    <form id="form">
+        <div class="sign_up">SIGN UP</div>
+        <div id="container">
+            <div id="credentials">
+                <fieldset>
+                    <legend>User Details: </legend>
+                    <label for="first_name">* First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <br>
+                    <label for="middle_name">Middle Name:</label>
+                    <input type="text" id="middle_name" name="middle_name">
+                    <br>
+                    <label for="last_name">* Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                    <br>
+                    <label for="age">* Age:</label>
+                    <input type="number" id="age" name="age" min="18" required>
+                </fieldset>
+                <fieldset>
+                    <legend>User Credentials: </legend>
+                    <label for="email">* Email: </label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="confirm_email">* Confirm Email: </label>
+                    <input type="email" id="confirm_email" name="confirm_email" required>
+                    <br>
+                    <label for="password">* Password: </label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                    <br>
+                    <label for="confirm_password">* Confirm Password: </label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </fieldset>
+            </div>
+            <div id="survey">
+                <fieldset>
+                    <legend>Survey: </legend>
+                    <label for="gender">Gender: </label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="non_binary">Non-binary</option>
+                        <option value="prefer_not_to_say">Prefer Not To Say</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <label for="religion">Religion: </label>
+                    <select id="religion" name="religion">
+                        <option value="catholic">Catholic</option>
+                        <option value="buddhist">Buddhist</option>
+                        <option value="muslim">Muslim</option>
+                        <option value="jewish">Jewish</option>
+                        <option value="prefer_not_to_say">Prefer Not To Say</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <hr class="dashed">
+                    <label for="city">City: </label>
+                    <input type="text" id="city">
+                    <br>
+                    <label for="postcode">Post Code: </label>
+                    <input type="text" id="postcode" pattern="^(GIR 0AA|[A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2})$">
+                    <hr class="dashed">
+                    <label for="where">Where Did You Hear About Us?</label>
+                    <br>
+                    <label for="github">Github</label>
+                    <input type="checkbox" id="github" name="website" value="github">
+                    <br>
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="checkbox" id="linkedin" name="website" value="linkedin">
+                    <br>
+                    <label for="instagram">Instagram</label>
+                    <input type="checkbox" id="instagram" name="website" value="instagram">
+                </fieldset>
+
+            </div>
+        </div>
+        <div id="submit_button">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
 </body>
 </html>

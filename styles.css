@@ -1,27 +1,119 @@
 :root {
-    background-color: rgb(137, 157, 190);
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    /* color definitions */
+    --background-color: rgb(55, 53, 62);
+    --outline-color: rgb(68, 68, 78);
+    --card-color: rgb(99, 84, 83);
+    --text-color: rgb(211, 218, 217);
+
+    background-color: var(--background-color);
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    min-height: 100vh;
+    background-color: var(--background-color);
 }
 
 #form {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 25px;
     padding: 10px;
     width: fit-content;
-    
+    gap: 25px;
+    background-color: var(--card-color);
 }
 
-#form > h1 {
+#container {
+    display: flex;
+    gap: 15px;
+}
+
+#credentials { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset {
+    border: none;
+    border: 1px dashed var(--text-color);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: lighter;
+    /* padding-top: 10px; */
+}
+.sign_up {
     font-weight: bold;
     text-align: center;
-    margin-top: -5px;
+    font-size: 30px;
+    font-weight: bold;
+    /* margin-top: -5px; */
 }
 
 input {
+
     border: none;
     border-radius: 25px;
+    width: 200px;
+    height: 25px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
 
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+#submit_button > button {
+    border: none;
+    border-radius: 25px;
+    width: 100px;
+    height: 35px;
+    background-color: var(--outline-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+select {
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 5px;
+
+}
+
+hr.dashed {
+    border: none;
+    width: 400px;
+    height: 5px;
+    margin-bottom: 5px;
+    border-top: 1px dashed var(--text-color);
+}
+
+#submit_button > button:hover {
+    background-color: var(--background-color);
+}
+
+#submit_button {
+    /* centers the button horizontally inside the form which is a column flex container */
+    align-self: center;
+    margin-top: -10px;
 }
